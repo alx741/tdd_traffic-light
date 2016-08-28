@@ -1,0 +1,251 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATMEGA328P-P IC1
+U 1 1 57C26AAE
+P 5250 3400
+F 0 "IC1" H 4500 4650 50  0000 L BNN
+F 1 "ATMEGA328P-P" H 5650 2000 50  0000 L BNN
+F 2 "DIL28" H 5250 3400 50  0000 C CIN
+F 3 "" H 5250 3400 50  0000 C CNN
+	1    5250 3400
+	1    0    0    -1  
+$EndComp
+Text GLabel 7350 4000 2    60   Input ~ 0
+RX
+Text GLabel 7350 3850 2    60   Input ~ 0
+TX
+Text GLabel 7350 4250 2    60   Input ~ 0
+VCC
+Text GLabel 7350 4500 2    60   Input ~ 0
+GND
+Text Notes 7750 3850 3    60   ~ 0
+USB - UART\n
+$Comp
+L GND #PWR2
+U 1 1 57C26E9F
+P 7050 4700
+F 0 "#PWR2" H 7050 4450 50  0001 C CNN
+F 1 "GND" H 7050 4550 50  0000 C CNN
+F 2 "" H 7050 4700 50  0000 C CNN
+F 3 "" H 7050 4700 50  0000 C CNN
+	1    7050 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR1
+U 1 1 57C26F7F
+P 4350 4700
+F 0 "#PWR1" H 4350 4450 50  0001 C CNN
+F 1 "GND" H 4350 4550 50  0000 C CNN
+F 2 "" H 4350 4700 50  0000 C CNN
+F 3 "" H 4350 4700 50  0000 C CNN
+	1    4350 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4700 4350 4500
+Wire Wire Line
+	6250 4000 7350 4000
+Wire Wire Line
+	7350 3850 7200 3850
+Wire Wire Line
+	7200 3850 7200 3900
+Wire Wire Line
+	7200 3900 6250 3900
+Wire Wire Line
+	7350 4250 6600 4250
+Wire Wire Line
+	6600 4250 6600 5050
+Wire Wire Line
+	4050 5050 6600 5050
+Wire Wire Line
+	4050 2300 4350 2300
+$Comp
+L LED D1
+U 1 1 57C270A4
+P 7150 2150
+F 0 "D1" H 7150 2250 50  0000 C CNN
+F 1 "RED" H 7150 2050 50  0000 C CNN
+F 2 "" H 7150 2150 50  0000 C CNN
+F 3 "" H 7150 2150 50  0000 C CNN
+	1    7150 2150
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D2
+U 1 1 57C2711B
+P 7150 2550
+F 0 "D2" H 7150 2650 50  0000 C CNN
+F 1 "YELLOW" H 7150 2450 50  0000 C CNN
+F 2 "" H 7150 2550 50  0000 C CNN
+F 3 "" H 7150 2550 50  0000 C CNN
+	1    7150 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D3
+U 1 1 57C2718A
+P 7150 2900
+F 0 "D3" H 7150 3000 50  0000 C CNN
+F 1 "GREEN" H 7150 2800 50  0000 C CNN
+F 2 "" H 7150 2900 50  0000 C CNN
+F 3 "" H 7150 2900 50  0000 C CNN
+	1    7150 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6250 2300 6950 2300
+Wire Wire Line
+	6950 2300 6950 2150
+Wire Wire Line
+	6250 2400 6950 2400
+Wire Wire Line
+	6950 2400 6950 2550
+Wire Wire Line
+	6250 2500 6750 2500
+Wire Wire Line
+	6750 2500 6750 2900
+Wire Wire Line
+	6750 2900 6950 2900
+$Comp
+L R R1
+U 1 1 57C272C6
+P 7500 2150
+F 0 "R1" V 7580 2150 50  0000 C CNN
+F 1 "330" V 7500 2150 50  0000 C CNN
+F 2 "" V 7430 2150 50  0000 C CNN
+F 3 "" H 7500 2150 50  0000 C CNN
+	1    7500 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 57C2730E
+P 7500 2550
+F 0 "R2" V 7580 2550 50  0000 C CNN
+F 1 "330" V 7500 2550 50  0000 C CNN
+F 2 "" V 7430 2550 50  0000 C CNN
+F 3 "" H 7500 2550 50  0000 C CNN
+	1    7500 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L R R3
+U 1 1 57C27340
+P 7500 2900
+F 0 "R3" V 7580 2900 50  0000 C CNN
+F 1 "330" V 7500 2900 50  0000 C CNN
+F 2 "" V 7430 2900 50  0000 C CNN
+F 3 "" H 7500 2900 50  0000 C CNN
+	1    7500 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR3
+U 1 1 57C27900
+P 7650 3050
+F 0 "#PWR3" H 7650 2800 50  0001 C CNN
+F 1 "GND" H 7650 2900 50  0000 C CNN
+F 2 "" H 7650 3050 50  0000 C CNN
+F 3 "" H 7650 3050 50  0000 C CNN
+	1    7650 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 3050 7650 2150
+$Comp
+L R R4
+U 1 1 57C27BB4
+P 6650 3600
+F 0 "R4" V 6730 3600 50  0000 C CNN
+F 1 "4.7" V 6650 3600 50  0000 C CNN
+F 2 "" V 6580 3600 50  0000 C CNN
+F 3 "" H 6650 3600 50  0000 C CNN
+	1    6650 3600
+	0    1    1    0   
+$EndComp
+Text GLabel 7000 3600 2    60   Input ~ 0
+VCC
+Wire Wire Line
+	7000 3600 6800 3600
+Wire Wire Line
+	6250 3750 6500 3750
+Wire Wire Line
+	6500 3750 6500 3600
+$Comp
+L C C1
+U 1 1 57C280C5
+P 7050 4400
+F 0 "C1" H 7075 4500 50  0000 L CNN
+F 1 "1000" H 7075 4300 50  0000 L CNN
+F 2 "" H 7088 4250 50  0000 C CNN
+F 3 "" H 7050 4400 50  0000 C CNN
+	1    7050 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 4500 7250 4500
+Wire Wire Line
+	7250 4500 7250 4550
+Wire Wire Line
+	7250 4550 7050 4550
+Wire Wire Line
+	7050 4550 7050 4700
+$Comp
+L C C2
+U 1 1 57C28428
+P 4200 4600
+F 0 "C2" H 4225 4700 50  0000 L CNN
+F 1 "22pf" H 4225 4500 50  0000 L CNN
+F 2 "" H 4238 4450 50  0000 C CNN
+F 3 "" H 4200 4600 50  0000 C CNN
+	1    4200 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4050 2300 4050 5050
+Connection ~ 4050 4600
+$EndSCHEMATC

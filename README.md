@@ -46,9 +46,9 @@ build and flash the firmware:
 
 With the firmware already in the chip, build the circuit
 
-![](schematics.png)
+![](schematic.png)
 
-Now you can get artistic with the casing
+Now you can get creative with the casing.
 
 ![](shot.png)
 
