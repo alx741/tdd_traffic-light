@@ -92,7 +92,7 @@ pull requests are welcome.
 
 I feel sorry for you ¯\\\_(ツ)\_/¯
 
-But if you port it and make it work, pull request are very welcome!
+But if you port it and make it work, pull requests are very welcome!
 
 
 ## Using
