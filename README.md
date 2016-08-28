@@ -54,7 +54,7 @@ With the firmware already in the chip, build the circuit
 
 Now you can get creative with the casing.
 
-![](shot.png)
+![](shot.jpg)
 
 
 ### Software
