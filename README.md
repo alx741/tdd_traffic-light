@@ -20,7 +20,10 @@ turns on when the tests fail and `Green` light is turned on when the test pass.
 This allows it be used in whatever language you are using and whatever test
 framework/tool you prefer.
 
-## Using
+*Note:* if you build it, please send me a picture! I would love to see it.
+
+
+## Construction
 
 The hardware is based on the popular *atmega328p* AVR microcontroller and a
 cheap USB-UART converter.
@@ -28,6 +31,7 @@ cheap USB-UART converter.
 The `src` directory contains the `firmware` for the *atmega328p* and the `host`
 code of the command line utility. Each directory has its own **Makefile** for
 compilation.
+
 
 ### Hardware
 
@@ -78,6 +82,21 @@ pull requests are welcome.
 I feel sorry for you ¯\\\_(ツ)\_/¯
 
 But if you port it and make it work, pull request are very welcome!
+
+
+## Using
+
+Once you have your hardware ready and the host software installed (or the binary
+in the directory you want to use it), you may run `tddlight` and see the
+commands it provides.
+
+The host software assumes the hardware is at `/dev/ttyUSB0`, but if it's not in
+your case, just provide the path as the last argument.
+
+You can now attach a `tddlight` invocation in your tests. Take a look in the
+`samples` directory to see how and to give it a first try. (If you can add a
+sample for another programming language or improve the existing ones, please
+send a pull request).
 
 
 ## Further
