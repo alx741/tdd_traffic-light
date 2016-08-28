@@ -35,22 +35,21 @@ int COM_FD = 0;
  * No control Terminal
  * Read enable
  * RAW input/output
- *
- * Puts Serial Descriptor in COM_FD, 0 if fail
  */
-int serial_init(void)
+void serial_init(char* port)
 {
     if (COM_FD > 0)
     {
-        return 0;
+        return;
     }
 
     // Open serial port file
-    int fd = open(COMPORT, O_RDWR | O_NOCTTY | O_NDELAY);
+    int fd = open(port, O_RDWR | O_NOCTTY | O_NDELAY);
     if (fd < 0)
     {
         COM_FD = -1;
-        return 0;
+        printf("Hardware not found in %s", port);
+        exit(1);
     }
 
     // Configure serial port
@@ -58,7 +57,8 @@ int serial_init(void)
     if (tcgetattr(fd, &config) != 0)
     {
         COM_FD = -1;
-        return 0;
+        printf("Error while configing serial port");
+        exit(1);
     }
 
     cfsetispeed(&config, B4800);
@@ -75,14 +75,51 @@ int serial_init(void)
     if (tcsetattr(fd, TCSANOW, &config) != 0)
     {
         COM_FD = -1;
-        return 0;
+        printf("Error while configing serial port");
+        exit(1);
     }
 
     COM_FD = fd;
-    return 1;
 }
 
-int main(void)
+void print_usage()
 {
+    printf("\nTDD Traffic Light\n\n");
+    printf("Available Commands:\n");
+    printf("   r\tOutput red light\n");
+    printf("   y\tOutput yellow light\n");
+    printf("   g\tOutput green light\n");
+}
+
+int main(int argc, char *argv[])
+{
+    if (argc < 2)
+    {
+        print_usage();
+        exit(1);
+    }
+
+    serial_init(COMPORT);
+
+    switch (argv[1][0])
+    {
+        case 'r':
+            printf("red\n");
+            break;
+
+        case 'y':
+            printf("yellow\n");
+            break;
+
+        case 'g':
+            printf("green\n");
+            break;
+
+        default:
+            print_usage();
+            exit(1);
+            break;
+    }
+
     return 0;
 }
