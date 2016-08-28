@@ -49,7 +49,9 @@ void serial_init(char* port)
     if (fd < 0)
     {
         COM_FD = -1;
-        printf("Hardware not found in %s", port);
+        printf("Hardware not found in %s\n", port);
+        printf("\nMaybe you don't have permissions to use it?");
+        printf("Try running as root or adding yourself to the group that owns %s", port);
         exit(1);
     }
 
@@ -113,19 +115,19 @@ int main(int argc, char *argv[])
     switch (argv[1][0])
     {
         case 'r':
-            printf("red\n");
+            write(COM_FD, "r", 1);
             break;
 
         case 'y':
-            printf("yellow\n");
+            write(COM_FD, "y", 1);
             break;
 
         case 'g':
-            printf("green\n");
+            write(COM_FD, "g", 1);
             break;
 
         case 'c':
-            printf("clear\n");
+            write(COM_FD, "c", 1);
             break;
 
         default:
