@@ -15,6 +15,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "tddlight.h"
 
+#include <stdlib.h>
 #include <fcntl.h>
 #include <termios.h>
 #include <stdio.h>
@@ -99,7 +100,14 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    serial_init(COMPORT);
+    if (argc == 3)
+    {
+        serial_init(argv[2]);
+    }
+    else
+    {
+        serial_init(COMPORT);
+    }
 
     switch (argv[1][0])
     {
@@ -121,5 +129,6 @@ int main(int argc, char *argv[])
             break;
     }
 
+    close(COM_FD);
     return 0;
 }
