@@ -37,7 +37,7 @@ int main(void)
                 break;
 
             case 'g':
-                PORTB = 0x03;
+                PORTB = 0x04;
                 break;
 
             default:
