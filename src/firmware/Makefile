@@ -25,5 +25,8 @@ flash: $(FILE).hex
 fuses:
 	sudo avrdude -p m328p -c usbasp -U lfuse:w:0x62:m -U hfuse:w:0xd9:m
 
+test:
+	sudo picocom -c -b 4800 /dev/ttyUSB0
+
 clean:
 	rm $(FILE).elf $(FILE).hex
