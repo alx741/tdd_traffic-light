@@ -4,6 +4,8 @@ This is a physical toy traffic light to be used with software development TDD
 (and testing in general) tools. It will not boost your productivity nor make you
 a better programmer or TDD practitioner, but it looks cool :)
 
+![](gif.gif)
+
 It consists of
 
 * An inexpensive hardware USB device that resembles a traffic light
