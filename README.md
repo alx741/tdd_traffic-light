@@ -6,6 +6,9 @@ a better programmer or TDD practitioner, but it looks cool :)
 
 ![](gif.gif)
 
+You can find more information on how it works in [this blog
+post](http://www.sillybytes.net/2016/08/tdd-test-driven-development-physical.html).
+
 It consists of
 
 * An inexpensive hardware USB device that resembles a traffic light
