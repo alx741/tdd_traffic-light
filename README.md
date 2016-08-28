@@ -1,7 +1,8 @@
 # TDD (Test-Driven Development) Traffic Light
 
 This is a physical toy traffic light to be used with software development TDD
-(and testing in general) tools.
+(and testing in general) tools. It will not boost your productivity nor make you
+a better programmer or TDD practitioner, but it looks cool :)
 
 It consists of
 
@@ -77,3 +78,11 @@ pull requests are welcome.
 I feel sorry for you ¯\\\_(ツ)\_/¯
 
 But if you port it and make it work, pull request are very welcome!
+
+
+## Further
+
+Just a though: If you work in a software company it would be really cool to
+build this with a larger form factor so it can sit in a corner of the office
+where everyone can see it. Then connect your continuous integration system to it
+so it reflects the state of the CI tests. How cool is that?
