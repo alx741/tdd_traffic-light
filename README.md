@@ -5,7 +5,9 @@ This is a physical toy traffic light to be used with software development TDD
 a better programmer or TDD practitioner, but it looks cool :)
 
 `Yellow`: Tests are running
+
 `Red`: Tests failed
+
 `Green`: Tests passed
 
 ![](gif.gif)
