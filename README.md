@@ -74,6 +74,6 @@ pull requests are welcome.
 
 #### Window's users
 
-I feel sorry for you ¯\\_(ツ)_/¯
+I feel sorry for you ¯\\\_(ツ)\_/¯
 
 But if you port it and make it work, pull request are very welcome!
