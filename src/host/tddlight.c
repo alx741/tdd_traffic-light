@@ -85,11 +85,12 @@ void serial_init(char* port)
 
 void print_usage()
 {
-    printf("\nTDD Traffic Light\n\n");
+    printf("tddlight [command] <serial_file>\n\n");
     printf("Available Commands:\n");
     printf("   r\tOutput red light\n");
     printf("   y\tOutput yellow light\n");
     printf("   g\tOutput green light\n");
+    printf("   c\tClear output\n");
 }
 
 int main(int argc, char *argv[])
@@ -121,6 +122,10 @@ int main(int argc, char *argv[])
 
         case 'g':
             printf("green\n");
+            break;
+
+        case 'c':
+            printf("clear\n");
             break;
 
         default:
