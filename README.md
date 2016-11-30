@@ -47,9 +47,8 @@ compilation.
 ### Hardware
 
 It is assumed that you know how and can flash the firmware in the *atmega328p*.
-(Hint: You may want to buy a cheap "usbasp" on Ebay)
 
-Any cheap USB-UART converter will work (take a look on Ebay as well).
+Any cheap USB-UART converter will work.
 
 First connect your AVR programmer to both the computer and the target chip, then
 build and flash the firmware:
@@ -88,7 +87,7 @@ If you try please let me know, and if you make it work by tweaking it a bit,
 pull requests are welcome.
 
 
-#### Window's users
+#### Windows users
 
 I feel sorry for you ¯\\\_(ツ)\_/¯
 
