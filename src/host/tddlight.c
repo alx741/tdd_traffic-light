@@ -51,7 +51,7 @@ void serial_init(char* port)
         COM_FD = -1;
         printf("Hardware not found in %s\n", port);
         printf("\nMaybe you don't have permissions to use it?");
-        printf("Try running as root or adding yourself to the group that owns %s", port);
+        printf("\nTry running it as root or adding yourself to the group that owns %s", port);
         exit(1);
     }
 
