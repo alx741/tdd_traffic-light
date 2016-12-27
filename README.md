@@ -101,7 +101,10 @@ in the directory you want to use it), you may run `tddlight` and see the
 commands it provides.
 
 The host software assumes the hardware is at `/dev/ttyUSB0`, but if it's not in
-your case, just provide the path as the last argument.
+your case, just provide the path as the last argument, or export the
+`TDDLIGHT_COMPORT` environment variable:
+
+    $ export TDDLIGHT_COMPORT = "/dev/ttyUSB1"
 
 You can now attach a `tddlight` invocation in your tests. Take a look in the
 `samples` directory to see how and to give it a first try. (If you can add a

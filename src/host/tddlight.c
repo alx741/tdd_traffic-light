@@ -109,7 +109,16 @@ int main(int argc, char *argv[])
     }
     else
     {
-        serial_init(COMPORT);
+        char* comport = getenv("TDDLIGHT_COMPORT");
+        if (comport == NULL)
+        {
+            serial_init(DEFAULT_COMPORT);
+        }
+        else
+        {
+            printf("Using $TDDLIGHT_COMPORT:  %s\n", comport);
+            serial_init(comport);
+        }
     }
 
     switch (argv[1][0])

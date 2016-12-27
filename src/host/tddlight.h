@@ -16,6 +16,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef DRIVER_H
 #define DRIVER_H
 
-#define COMPORT "/dev/ttyUSB0"
+#define DEFAULT_COMPORT "/dev/ttyUSB0"
 
 #endif
