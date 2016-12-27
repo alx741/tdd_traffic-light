@@ -7,5 +7,8 @@ $(PROGRAM): $(PROGRAM).c
 install: $(PROGRAM)
 	install -m 0755 $(PROGRAM) $(prefix)/bin
 
+uninstall:
+	rm /usr/bin/tddlight
+
 clean:
 	rm $(PROGRAM)
