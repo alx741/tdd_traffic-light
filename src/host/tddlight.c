@@ -60,7 +60,7 @@ void serial_init(char* port)
     if (tcgetattr(fd, &config) != 0)
     {
         COM_FD = -1;
-        printf("Error while configing serial port");
+        printf("Error while configuring serial port");
         exit(1);
     }
 
@@ -78,7 +78,7 @@ void serial_init(char* port)
     if (tcsetattr(fd, TCSANOW, &config) != 0)
     {
         COM_FD = -1;
-        printf("Error while configing serial port");
+        printf("Error while configuring serial port");
         exit(1);
     }
 
@@ -116,7 +116,6 @@ int main(int argc, char *argv[])
         }
         else
         {
-            printf("Using $TDDLIGHT_COMPORT:  %s\n", comport);
             serial_init(comport);
         }
     }
