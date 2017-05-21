@@ -28,7 +28,7 @@ argument so is up to the programmer to invoke it in the appropriate place and
 time so the `Yellow` lights is on while the test are executing, the `Red` light
 turns on when the tests fail and `Green` light is turned on when the test pass.
 
-This allows it be used in whatever language you are using and whatever test
+This allows it be used with whatever language you like and whatever test
 framework/tool you prefer.
 
 *Note:* if you build it, please send me a picture! I would love to see it.
@@ -94,7 +94,7 @@ I feel sorry for you ¯\\\_(ツ)\_/¯
 But if you port it and make it work, pull requests are very welcome!
 
 
-## Using
+## Usage
 
 Once you have your hardware ready and the host software installed (or the binary
 in the directory you want to use it), you may run `tddlight` and see the

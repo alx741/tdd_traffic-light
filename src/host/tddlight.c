@@ -52,7 +52,7 @@ void serial_init(char* port)
         printf("Hardware not found in %s\n", port);
         printf("\nMaybe you don't have permissions to use it?");
         printf("\nTry running it as root or adding yourself to the group that owns %s", port);
-        exit(1);
+        exit(0);
     }
 
     // Configure serial port
@@ -61,7 +61,7 @@ void serial_init(char* port)
     {
         COM_FD = -1;
         printf("Error while configuring serial port");
-        exit(1);
+        exit(0);
     }
 
     cfsetispeed(&config, B4800);
@@ -89,10 +89,10 @@ void print_usage()
 {
     printf("tddlight [command] <serial_file>\n\n");
     printf("Available Commands:\n");
-    printf("   r\tOutput red light\n");
-    printf("   y\tOutput yellow light\n");
-    printf("   g\tOutput green light\n");
-    printf("   c\tClear output\n");
+    printf("   \tred\n");
+    printf("   \tyellow\n");
+    printf("   \tgreen\n");
+    printf("   \tclear\n");
 }
 
 int main(int argc, char *argv[])
